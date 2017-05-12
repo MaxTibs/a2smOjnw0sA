@@ -1,0 +1,12 @@
+<header>
+    <div [style.background-color]="this.colorSelector.getColor('gray')" [style.height.px]="40">
+        <header-top></header-top>
+    </div>
+    <div [style.background-color]="this.colorSelector.getColor(this.color)" [style.height.px]="50">
+        <header-mid></header-mid>
+    </div>
+    <div [hidden]="true" [style.background-color]="this.colorSelector.getColor('gray')" [style.height.px]="60">
+        <banner></banner>
+    </div>
+</header>
+

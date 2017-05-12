@@ -1,0 +1,7 @@
+<table>
+  <tr>
+    <td *ngFor="let item of this.colors; let i = index" [style.background-color]="this.colorSelector.getColor(item)" [style.height.px]="100" [style.width.px]="100">
+      {{ item }}
+    </td>
+  </tr>
+</table>

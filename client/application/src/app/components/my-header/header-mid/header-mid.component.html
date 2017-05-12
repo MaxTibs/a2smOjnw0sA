@@ -1,0 +1,7 @@
+<img id="logo" src="./src/app/components/my-header/blank.gif"/>
+<ul>
+  <li class="link" *ngFor="let item of this.links.goesTo()l let i=index;" >
+    <a [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}" [routerLink]="[item]" >{{this.links.nameGoesTo()[i]}}</a>
+  </li>
+</ul>
+
