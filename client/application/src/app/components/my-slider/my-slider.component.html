@@ -1,3 +1,14 @@
-<div class="image">
-
+<div class="carousel">
+    <a class="previous" (click)="next()" ></a>
+    <a class="next" (click)="previous()" ></a>
+    <ul class="slides" [@slider]='this.position'>
+        <li *ngFor="let image of this.images">
+            <div class="content">
+                <h1 class="title"> {{image.title}} </h1>
+                <p class="description" > {{image.description}} </p>
+                <a class="link" > {{image.link}} </a>
+            </div>
+            <img src="{{image.url}}" alt="">
+        </li>
+    </ul>
 </div>
