@@ -11,7 +11,7 @@
     list-style:none;
     position:relative;
     height: 100%;
-    width:400%; /* Number of panes * 100% */
+    width:1000%; /* Number of panes * 100% */
     overflow:hidden; 
     /*-moz-animation:carousel 30s infinite;
     -webkit-animation:carousel 30s infinite;
@@ -21,7 +21,7 @@
 {
     position:relative;
     float:left;
-    width: 25%; /* 100 / number of panes */
+    width:10%; /* 100 / number of panes */
 }
 .carousel img
 {
@@ -83,11 +83,12 @@
     cursor: pointer;
     height: 100px;
     width: 70px;
-    left: 25px;
+    right: 25px;
     top: 40%;
     background-image: url('./next.png');
     opacity: 0.9;
-    background-size: 100% 100%;
+    background-size: 100% 100%;    
+    transform: rotate(180deg);
     z-index: 3;
 }
 .previous
@@ -96,11 +97,10 @@
     cursor: pointer;
     height: 100px;
     width: 70px;
-    right: 25px;
+    left: 25px;
     top: 40%;
     background-image: url('./next.png');
     background-size: 100% 100%;
-    transform: rotate(180deg);
     opacity: 0.9;
     z-index: 3;
 }

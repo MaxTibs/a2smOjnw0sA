@@ -16,6 +16,12 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
       state('2', style({ left: '-100%' })),
       state('3', style({ left: '-200%' })),
       state('4', style({ left: '-300%' })),
+      state('5', style({ left: '-400%' })),
+      state('6', style({ left: '-500%' })),
+      state('7', style({ left: '-600%' })),
+      state('8', style({ left: '-700%' })),
+      state('9', style({ left: '-800%' })),
+      state('10', style({ left: '-900%' })),
       transition('* <=> *', animate('1s ease-out'))
     ])
   ]
@@ -33,7 +39,10 @@ export class MySliderComponent implements OnInit {
   private position = 0;
   private timeout;
 
-  ngOnInit() { this.animate(); }
+  ngOnInit() 
+  { 
+      this.animate();
+  }
 
   private animate()
   {

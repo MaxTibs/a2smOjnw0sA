@@ -1,6 +1,6 @@
 <div class="carousel">
-    <a class="previous" (click)="next()" ></a>
-    <a class="next" (click)="previous()" ></a>
+    <a class="next" (click)="next()" [hidden]="position===images.length"></a>
+    <a class="previous" (click)="previous()" [hidden]="position===1" ></a>
     <ul class="slides" [@slider]='this.position'>
         <li *ngFor="let image of this.images">
             <div class="content">
