@@ -1,0 +1,47 @@
+<div class="test-div">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-7"> 
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Titre</th>
+                            <th>Organisation</th>
+                            <th>Date</th>
+                            <th>Desciption</th>
+                            <th>Endroit</th>
+                            <th>Adresse</th>
+                            <th>CodePostal</th>
+                            <th>Latitude</th>
+                            <th>Longitude</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of this.socket.serviceEvenements().evenement;let i = index;">
+                            <th>{{this.socket.serviceEvenements().evenement[i].titre}}</th>
+                            <th>{{this.socket.serviceEvenements().evenement[i].organisation}}</th>
+                            <th>{{this.socket.serviceEvenements().evenement[i].date}}</th>
+                            <th>{{this.socket.serviceEvenements().evenement[i].desciption}}</th>
+                            <th>{{this.socket.serviceEvenements().evenement[i].endroit}}</th>
+                            <th>{{this.socket.serviceEvenements().evenement[i].adresse}}</th>
+                            <th>{{this.socket.serviceEvenements().evenement[i].codePostal}}</th>
+                            <th>{{this.socket.serviceEvenements().evenement[i].latitude}}</th>
+                            <th>{{this.socket.serviceEvenements().evenement[i].longitude}}</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-5"> 
+                <div style="text-align: center">
+                    <button style="text-align: center" type="button" class  (click)="this.socket.serviceEvenements().ajouterEvenement();">Ajouter evenement</button>
+                </div>
+
+                <h3>My Google Maps Demo</h3>
+                <ngui-map id="map" zoom="13" center="37.775, -122.434" mapTypeId="satellite">
+                <!--<marker *ngFor="let pos of positions" [position]="pos" (initialized$)="onMarkerInit($event)"></marker>-->
+                </ngui-map>
+            </div>
+        </div>
+    </div>
+</div>

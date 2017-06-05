@@ -6,13 +6,15 @@ export class Links
     private linkToGo : string[] =
     [
         "forum",
+        "slideshow",
         ""
     ];
 
     private nameToGo : string[] =
     [
         "Forum",
-        "Home"
+        "slideshow",
+        "testPage"
     ];
 
     public goesTo() : Array<string>

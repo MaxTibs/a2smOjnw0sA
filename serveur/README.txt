@@ -1,1 +1,0 @@
-Liens de références pour l'initialisation du serveur : http://brianflove.com/2016/03/29/typescript-express-node-js/

@@ -1,0 +1,9 @@
+.test-div
+{
+    padding-top : 200px;
+    text-align: center;
+}
+#map {
+  height: 500px;
+  width:100%;
+}
